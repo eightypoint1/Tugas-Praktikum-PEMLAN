@@ -64,7 +64,6 @@ public class Rectangle {
         Main.printGaris();
         System.out.println(Main.GREEN + "ID       : " + getId());
         System.out.println(Main.YELLOW + "Panjang   : " + getPanjang());
-        System.out.println(Main.BLUE + "Lebar   : " + getLebar());
         System.out.println(Main.GREEN + "Keliling : " + getKeliling());
         System.out.println(Main.BLUE + "Luas     : " + getLuas());
         Main.printGaris();
