@@ -2,6 +2,8 @@ package praktic.geometry.mains;
 
 // Import Class Circle untuk mendeklarasi Objek Circle
 import praktic.geometry.shapes.Circle;
+import praktic.geometry.shapes.Rectangle;
+
 // Import Scanner untuk input pengguna
 import java.util.Scanner;
 
@@ -20,6 +22,9 @@ public class Main{
     public static void main(String[] args) {
         // Instansiasi objek lingkaran
         Circle lingkaran = new Circle();
+
+        //Instansiasi objek Rectangle
+        Rectangle rectangle = new Rectangle();
 
         // Instansiasi Objek scanner
         Scanner scan = new Scanner(System.in);
@@ -43,5 +48,20 @@ public class Main{
 
         // Output Deskripsi objek lingkaran
         lingkaran.printDeskripsi();
+
+        System.out.println("Rectangle");
+        printGaris();
+
+        // Input ID objek lingkaran
+        System.out.print("Isikan ID : "); 
+        rectangle.setId(scan.nextInt());
+        
+        // Input Radius objek lingkaran
+        System.out.print("Isikan Panjang : ");
+        rectangle.setPanjang(scan.nextDouble());
+
+        // Input Radius objek lingkaran
+        System.out.print("Isikan Lebar: ");
+        rectangle.setLebar(scan.nextDouble());
     }
 }
