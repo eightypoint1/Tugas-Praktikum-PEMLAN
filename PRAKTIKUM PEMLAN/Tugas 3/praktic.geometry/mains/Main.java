@@ -63,5 +63,7 @@ public class Main{
         // Input Radius objek lingkaran
         System.out.print("Isikan Lebar: ");
         rectangle.setLebar(scan.nextDouble());
+
+        rectangle.printDeskripsi();
     }
 }
