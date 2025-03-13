@@ -52,18 +52,19 @@ public class Main{
         System.out.println("Rectangle");
         printGaris();
 
-        // Input ID objek lingkaran
+        // Input ID objek rectangle
         System.out.print("Isikan ID : "); 
         rectangle.setId(scan.nextInt());
         
-        // Input Radius objek lingkaran
+        // Input Panjang objek Panjang
         System.out.print("Isikan Panjang : ");
         rectangle.setPanjang(scan.nextDouble());
 
-        // Input Radius objek lingkaran
+        // Input Lebar objek rectangle
         System.out.print("Isikan Lebar: ");
         rectangle.setLebar(scan.nextDouble());
 
+        // Output Deskripsi objek rectangle
         rectangle.printDeskripsi();
     }
 }
