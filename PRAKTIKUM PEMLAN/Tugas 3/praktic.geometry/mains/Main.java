@@ -2,6 +2,7 @@ package praktic.geometry.mains;
 
 // Import Class Circle untuk mendeklarasi Objek Circle
 import praktic.geometry.shapes.Circle;
+// Import Class Circle untuk mendeklarasi Objek Main
 import praktic.geometry.shapes.Rectangle;
 
 // Import Scanner untuk input pengguna
