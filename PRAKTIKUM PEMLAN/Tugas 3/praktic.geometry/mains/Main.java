@@ -67,5 +67,7 @@ public class Main{
 
         // Output Deskripsi objek rectangle
         rectangle.printDeskripsi();
+
+        scan.close();
     }
 }
