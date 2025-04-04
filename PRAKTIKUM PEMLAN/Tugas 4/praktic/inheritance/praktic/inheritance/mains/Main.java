@@ -25,14 +25,14 @@ public class Main {
         bus1.dropPassengers(bus1.getCurrentPassengers());
         System.out.println();
 
-        // Membuat objek kereta1
+        // Membuat objek train1
         Train train1 = new Train("Kereta Commuter Line", 200, "Stasiun Kota - Stasiun Pusat"); 
         train1.startJourney();
 
         // Naikan penumpang
         train1.boardPassengers(150);
 
-        // Hitung tarif objek kereta1
+        // Hitung tarif objek train1
         train1.calculateFare();
 
         // Berhentikan Perjalanan
@@ -40,14 +40,14 @@ public class Main {
         train1.dropPassengers(train1.getCurrentPassengers());
         System.out.println();
 
-        // Membuat objek taksi1
+        // Membuat objek taxi1
         Taxi taxi1 = new Taxi("Taksi BlueBird", 4, "Bandara - Hotel"); 
         taxi1.startJourney(); 
 
         // Naikan penumpang
         taxi1.boardPassengers(3); 
 
-        // Hitung tarif objek taksi1
+        // Hitung tarif objek taxi1
         taxi1.calculateFare(10);
 
         // Berhentikan Perjalanan
@@ -72,7 +72,7 @@ public class Main {
          bus2.dropPassengers(1); 
          System.out.println();
 
-         // Membuat objek kereta2
+         // Membuat objek train2
          Train train2 = new Train("Kereta Commuter Line", 200, "Stasiun Kota - Stasiun Pusat");
          train2.startJourney();
          train2.boardPassengers(150);
@@ -87,7 +87,7 @@ public class Main {
          train2.dropPassengers(1);
          System.out.println();
 
-         // Membuat objek taksi2
+         // Membuat objek taxi2
          Taxi taxi2 = new Taxi("Taksi BlueBird", 4, "Bandara - Hotel");
          taxi2.boardPassengers(3); 
 
