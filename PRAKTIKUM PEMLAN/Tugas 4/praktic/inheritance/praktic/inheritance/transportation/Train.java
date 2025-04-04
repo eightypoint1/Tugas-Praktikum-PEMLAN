@@ -3,7 +3,7 @@ package praktic.inheritance.transportation;
 // Kelas Train subclass Vehicle
 public class Train extends Vehicle {
     // Data Field
-    public static final int FIXED_FARE = 10000; // Tarif tetap
+    private static final int FIXED_FARE = 10000; // Tarif tetap
 
     // Konstruktor: name, capacity, route
     public Train(String name, int capacity, String route) {

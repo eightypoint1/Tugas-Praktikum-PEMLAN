@@ -60,4 +60,5 @@ public class Vehicle {
     public int getCurrentPassengers() {
         return currentPassengers;
     }
+
 }

@@ -3,7 +3,7 @@ package praktic.inheritance.transportation;
 // Kelas Bus subclass Vehicle
 public class Bus extends Vehicle {
     // Data Field
-    public static final int FARE_PER_STOP = 2000; // Tarif per halte 
+    private static final int FARE_PER_STOP = 2000; // Tarif per halte 
 
     // Konstruktor: name, capacity, route
     public Bus(String name, int capacity, String route) {
