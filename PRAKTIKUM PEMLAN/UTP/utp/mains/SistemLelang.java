@@ -1,3 +1,8 @@
+package utp.mains;
+
+import utp.lelang.Elektronik;
+import utp.lelang.Peserta;
+import utp.lelang.Seni;
 public class SistemLelang {
 
     public static void main(String[] args) {

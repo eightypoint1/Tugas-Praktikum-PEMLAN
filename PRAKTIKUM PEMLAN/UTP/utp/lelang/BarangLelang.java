@@ -1,3 +1,5 @@
+package utp.lelang;
+
 public class BarangLelang {
     private String namaBarang;
     private double hargaAwal;
