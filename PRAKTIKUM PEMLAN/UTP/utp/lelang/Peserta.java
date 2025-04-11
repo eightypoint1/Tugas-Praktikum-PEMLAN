@@ -1,5 +1,4 @@
 package utp.lelang;
-
 public class Peserta {
     private String nama;
     private double saldo;
