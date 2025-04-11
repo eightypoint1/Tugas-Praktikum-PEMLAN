@@ -1,7 +1,5 @@
 package utp.lelang;
 
-import BarangLelang;
-
 public class Elektronik extends BarangLelang {
     private int garansi;
 

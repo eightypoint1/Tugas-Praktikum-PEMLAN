@@ -1,7 +1,5 @@
 package utp.lelang;
 
-import BarangLelang;
-
 public class Seni extends BarangLelang {
     private String seniman;
 
