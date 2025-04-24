@@ -103,10 +103,6 @@ public class ShapeCalculator {
         Shape Cube3 = new Cube(cubeEdge2, massPoli);
         Shape Sphere3 = new Sphere(sphereRadius2, massPoli);
 
-        // Demonstrasi menggunakan setName
-        Cube3.setName("PolyCube"); 
-        Sphere3.setName("PolySphere");
-
         // Polimorfisme CircularShape
         CircularShape SPHERE = new Sphere(sphereRadius2, massPoli);
 
