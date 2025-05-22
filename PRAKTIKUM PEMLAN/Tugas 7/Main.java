@@ -18,6 +18,8 @@ public class Main {
         System.out.println("Tapi sebelumnya, ini adalah dua contoh url yang salah, supaya input anda tidak juga ikut salah =\n");
 
         // Contoh exception "MalformedURLException"
+        // MalformedURLException adalah exception checked dari package java.net yang terjadi saat penciptaan objek URL
+        // Jika ada masalah dengan format URL yang digunakan sebagai argumen untuk penciptaan objek URL, maka akan keluar exception ini
         try {
             // Membuat objek URL, dengan argumen yang seharusnya dalam bentuk URL
             // Tapi argumen kehilangan beberapa hal, pertama protokol yang valid tidak ada (ftp://,http://,https://)
@@ -31,6 +33,9 @@ public class Main {
         }
 
         // Contoh Exception "UnknownHostException" dan juga "IOException"
+        // Unkown adalah exception checked dari package java.net yang terjadi saat menggunakan method connect() pada objek HttpURLConnection yang menggunakan objek URL
+        // Jika format URl sudah benar, tetapi url yang diciptakan tidak menuju kemana-mana atau dalam kata lain tidak valid, maka akan keluar exception ini
+        // IOException keluar untuk masalah IO lainnya dengan method connect()
         try {
             // Di contoh ini format URL benar, tapi domain name ini tidak valid 
             String Url = "http://urlyangtidaknyatauntuknyatatidaktopi.com";
@@ -44,7 +49,7 @@ public class Main {
             // Karena domain yang kita masukkan tidak valid maka tidak menunjuk kemana-mana, maka keluar UnkownHostException
             System.out.println("UnknownHostException, domainnya gak valid, coba cek, emang domain namenya udah bener?");
         }  catch (IOException e) {
-            // Kita perlu IOexception karena method connect memerlukannya, jadi jika ada masalah seperti server sedang down, akan keluar exception ini
+            // Kita perlu IOexception karena method connect memerlukannya, bukan karena ada masalah dengan URL, tapi karena masalah seperti server sedang down
             System.out.println("IOException, servernya paling lagi down, URl mu benar kok ;)");
         }
 
