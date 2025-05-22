@@ -10,6 +10,14 @@ import java.util.*;
  *  Exception yang digunakan dalam program ini MalformedURLException, UnknownHostException, dan IOException
  */
 public class Main {
+
+    // Ini method untuk menggunakan clause throws
+    public void cekURL(String Url) throws MalformedURLException, UnknownHostException, IOException {;
+        URL url = new URL(Url);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.connect();
+        System.out.println("Hore, karena ngak ada exception (yang karena url rusak) artinya URL udah berjalan dengan baik, Terimakasih sudah menggunakan program ini !!!");
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -75,14 +83,10 @@ public class Main {
 
         System.out.println("\nNah, karena sudah tahu mana yang salah dan mana yang benar, silakan inputkan URL anda = ");
         String Url = scan.nextLine();
-        // Untuk mengecek jika ada exception yang keluar karena url yang diinput salah
         boolean ngakException = true;
 
         try {
-            URL url = new URL(Url);
-            System.out.println("URL = " + Url);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.connect();
+            cekURL(Url);
         } catch (MalformedURLException e) {
             System.out.println("MalformedURLException, artinya format URL yang anda berikan tidak lengkap atau ada yang salah, coba cek protokol dan root domainnya");
             ngakException = false;
@@ -93,9 +97,7 @@ public class Main {
             System.out.println("IOException, servernya paling lagi down, URl mu benar kok ;)");
         }
 
-        if (ngakException) {
-            System.out.println("Hore, karena ngak ada exception (yang karena url rusak) artinya URL udah berjalan dengan baik, Terimakasih sudah menggunakan program ini !!!");
-        }  else {
+        if (!ngakException) {
             System.out.println("Kelihatannya masih ada sesuatu yang salah dengan URl yang anda inputkan, coba cek lagi");
         }
     }  
