@@ -12,7 +12,7 @@ import java.util.*;
 public class Main {
 
     // Ini method untuk menggunakan clause throws
-    public void cekURL(String Url) throws MalformedURLException, UnknownHostException, IOException {;
+    public static void cekURL(String Url) throws MalformedURLException, UnknownHostException, IOException {;
         URL url = new URL(Url);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.connect();
