@@ -2,9 +2,11 @@ package uap.mains;
 
 // Import semua bentuknya
 import uap.models.*;
+import uap.bases.Shape;
 //Import buat scanner
 import java.util.*;
 
+// Kelas Main, Saya asumsi maksud dari use interface dan kelas Shape adalah kita menggunakan interfacenya melalui bentuk-bentuk yang kita gunakna
 public class KalkulatorPabrik {
 
     // Method buat ngeformat harga jadi rupiah
@@ -26,6 +28,7 @@ public class KalkulatorPabrik {
         }
     }
 
+
     public static void main(String[] args) {
         // Buat Scanner 
         Scanner scan = new Scanner(System.in);
@@ -46,6 +49,7 @@ public class KalkulatorPabrik {
 
         // Buat objek Torus dari Input
         Torus torus = new Torus(torusMajorRadius, torusMinorRadius);
+        
         torus.setName("Torus Donut");
         // output informasi
         torus.printInfo();

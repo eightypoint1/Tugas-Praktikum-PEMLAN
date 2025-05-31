@@ -9,10 +9,13 @@ public class Sphere extends Shape implements ThreeDimensional, PiRequired, MassC
     private double radius;
 
     // no arg constructor
-    public Sphere() {}
+    public Sphere() {
+        super();
+    }
 
     // Konstruktor arg radius
     public Sphere(double radius) {
+        super();
         this.radius = radius;
     }
 

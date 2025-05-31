@@ -6,6 +6,6 @@ public interface MassCalculable {
     int DENSITY = 8;
     // ketebalannya stainless steel
     double THICKNESS = 0.5;
-    // method yang akan di implementasikan di bentuk-bentuknya
+    // method yang akan di implementasikan di bentuk-bentu
     double getMass();
 }

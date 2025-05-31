@@ -13,10 +13,13 @@ public class Torus extends Shape implements ThreeDimensional, PiRequired, MassCa
     private double minorRadius;
 
     // konstruktor no arg
-    public Torus() {}
+    public Torus() {
+        super();
+    }
 
     // Konstructor arg = majorRadius dan minorRadius
     public Torus(double majorRadius, double minorRadius) {
+        super();
         this.majorRadius = majorRadius;
         this.minorRadius = minorRadius;
     }
