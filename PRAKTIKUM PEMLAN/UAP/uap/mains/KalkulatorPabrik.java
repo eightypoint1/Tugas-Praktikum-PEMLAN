@@ -2,11 +2,15 @@ package uap.mains;
 
 // Import semua bentuknya
 import uap.models.*;
+// Ini untuk bagian use kelas Shape dan use interface MassConverter dan ShippingCostCalculator
 import uap.bases.Shape;
+import uap.interfaces.MassConverter;
+import uap.interfaces.ShippingCostCalculator;
+
 //Import buat scanner
 import java.util.*;
 
-// Kelas Main, Saya asumsi maksud dari use interface dan kelas Shape adalah kita menggunakan interfacenya melalui bentuk-bentuk yang kita gunakna
+// Kelas Main, Saya 
 public class KalkulatorPabrik {
 
     // Method buat ngeformat harga jadi rupiah
@@ -28,9 +32,7 @@ public class KalkulatorPabrik {
         }
     }
 
-
     public static void main(String[] args) {
-        // Buat Scanner 
         Scanner scan = new Scanner(System.in);
         System.out.println("=============================================");
         System.out.println("Kalkulator Pabrik Cetakan Donat Rumahan");
@@ -40,35 +42,46 @@ public class KalkulatorPabrik {
 
         System.out.println("Donat dengan lubang");
         System.out.println("=============================================");
-        // Input untuk kedua nilai Torus
         System.out.print("Isikan Radius   : ");
         double torusMajorRadius = scan.nextDouble();
         System.out.print("Isikan radius   : ");
         double torusMinorRadius = scan.nextDouble();
         System.out.println("=============================================");
 
-        // Buat objek Torus dari Input
+        // Buat Torus
         Torus torus = new Torus(torusMajorRadius, torusMinorRadius);
         
-        torus.setName("Torus Donut");
-        // output informasi
-        torus.printInfo();
-        System.out.println("Massa dalam kg  : " + torus.gramToKilogram());
-        System.out.println("Biaya kirim     : " + buatHarga(torus.calculateCost()));
+        // Ini implementasi Polimorfisme, sedikit jelek tapi bekerja
+        // Kita mengimplementasikan printinfo menggunakan Shape
+        // Hitung massa menggunakan MassConverter
+        // Hitung Harga menggunakan Shippingcostcalculator
+        Shape shapeTorus = torus;
+        MassConverter converterTorus = torus;
+        ShippingCostCalculator calculatorTorus = torus;
+
+        shapeTorus.printInfo();
+        
+        System.out.println("Massa dalam kg  : " + converterTorus.gramToKilogram());
+        System.out.println("Biaya kirim     : " + buatHarga(calculatorTorus.calculateCost()));
         System.out.println("=============================================");
 
         System.out.println("Donat tanpa lubang");
         System.out.println("=============================================");
-        // Input untuk sphere
         System.out.print("Isikan radius   : ");
         double sphereRadius = scan.nextDouble();
         System.out.println("=============================================");
 
-        Sphere sphere = new Sphere(sphereRadius);
-        sphere.setName("Sphere Donut");
-        sphere.printInfo();
-        System.out.println("Massa dalam kg  : " + sphere.gramToKilogram());
-        System.out.println("Biaya kirim     : " + buatHarga(sphere.calculateCost()));
+        // Sama seperti untuk Torus 
+        Sphere specificSphere = new Sphere(sphereRadius);
+
+        Shape shapeSphere = specificSphere;
+        MassConverter converterSphere = specificSphere;
+        ShippingCostCalculator calculatorSphere = specificSphere;
+
+        shapeSphere.printInfo();
+        
+        System.out.println("Massa dalam kg  : " + converterSphere.gramToKilogram());
+        System.out.println("Biaya kirim     : " + buatHarga(calculatorSphere.calculateCost()));
         System.out.println("=============================================");
     }
 }
