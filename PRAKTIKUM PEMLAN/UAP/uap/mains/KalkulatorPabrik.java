@@ -9,8 +9,6 @@ import uap.interfaces.ShippingCostCalculator;
 
 //Import buat scanner
 import java.util.*;
-
-// Kelas Main, Saya 
 public class KalkulatorPabrik {
 
     // Method buat ngeformat harga jadi rupiah
