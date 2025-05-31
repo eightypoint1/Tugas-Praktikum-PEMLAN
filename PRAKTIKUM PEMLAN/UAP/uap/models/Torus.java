@@ -46,12 +46,12 @@ public class Torus extends Shape implements ThreeDimensional, PiRequired, MassCa
 
     // implementasikan dari ThreeDimensional
     public double getVolume() {
-        return 2 * PI * PI * this.majorRadius * this.minorRadius * this.minorRadius;
+        return 2 * PI * PI * majorRadius * minorRadius * minorRadius;
     }
 
     // implementasikan dari ThreeDimensional
     public double getSurfaceArea() {
-        return 4 * PI * PI * this.majorRadius * this.minorRadius;
+        return 4 * PI * PI * majorRadius * minorRadius;
     }
 
     // implementasikan dari MassCalculable

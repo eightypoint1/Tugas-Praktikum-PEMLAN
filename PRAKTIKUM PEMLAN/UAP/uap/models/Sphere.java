@@ -31,12 +31,12 @@ public class Sphere extends Shape implements ThreeDimensional, PiRequired, MassC
 
     // implementasikan dari ThreeDimensional
     public double getVolume() {
-        return (4.0 / 3.0) * PI * this.radius * this.radius * this.radius;
+        return (4.0 / 3.0) * PI * radius * radius * radius;
     }
 
     // implementasikan dari ThreeDimensional
     public double getSurfaceArea() {
-        return 4 * PI * this.radius * this.radius;
+        return 4 * PI * radius * radius;
     }
 
     // import dari masscalculable
