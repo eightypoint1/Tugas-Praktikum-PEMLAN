@@ -70,11 +70,11 @@ public class KalkulatorPabrik {
         System.out.println("=============================================");
 
         // Sama seperti untuk Torus 
-        Sphere specificSphere = new Sphere(sphereRadius);
+        Sphere sphere = new Sphere(sphereRadius);
 
-        Shape shapeSphere = specificSphere;
-        MassConverter converterSphere = specificSphere;
-        ShippingCostCalculator calculatorSphere = specificSphere;
+        Shape shapeSphere = sphere;
+        MassConverter converterSphere = sphere;
+        ShippingCostCalculator calculatorSphere = sphere;
 
         shapeSphere.printInfo();
         
